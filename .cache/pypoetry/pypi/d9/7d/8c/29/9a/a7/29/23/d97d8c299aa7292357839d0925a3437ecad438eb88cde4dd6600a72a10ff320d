@@ -1,0 +1,1 @@
+9999999999{"name": "playwright", "version": "1.33.0", "summary": "A high-level API to automate web browsers", "platform": null, "requires_dist": ["greenlet (==2.0.1)", "pyee (==9.0.4)", "typing-extensions ; python_version <= \"3.8\""], "requires_python": ">=3.7", "files": [], "_cache_version": "1.0.0"}

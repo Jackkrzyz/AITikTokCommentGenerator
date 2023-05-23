@@ -1,0 +1,1 @@
+9999999999{"name": "SpeechRecognition", "version": "3.10.0", "summary": "Library for performing speech recognition, with support for several engines and APIs, online and offline.", "platform": null, "requires_dist": ["requests (>=2.26.0)", "openai ; extra == 'whisper-api'"], "requires_python": ">=3.8", "files": [], "_cache_version": "1.0.0"}

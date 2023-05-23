@@ -1,0 +1,1 @@
+9999999999{"name": "pyperclip", "version": "1.8.2", "summary": "A cross-platform clipboard module for Python. (Only handles plain text for now.)", "platform": "", "requires_dist": null, "requires_python": null, "files": [], "_cache_version": "1.0.0"}

@@ -1,0 +1,1 @@
+9999999999{"name": "pyee", "version": "9.0.4", "summary": "A port of node.js's EventEmitter to python.", "platform": "", "requires_dist": ["typing-extensions"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}

@@ -1,0 +1,7 @@
+session.screen0.toolbar.visible:	false
+session.screen0.iconbar.mode:	{static groups} (workspace)
+session.screen0.tabs.usePixmap:	false
+session.screen0.slit.placement:	RightBottom
+session.screen0.slit.direction:	Vertical
+session.styleFile:	/usr/share/fluxbox/styles/Meta
+session.configVersion:	13

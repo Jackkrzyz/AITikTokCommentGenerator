@@ -4,7 +4,7 @@ from download_mp3 import download_mp3
 import openai_implementation, os
 window = tk.Tk()
 window.title("AI TikTok Comment Generator")
-window.geometry("400x400")
+window.geometry("400x500")
 
 
 frame = tk.Frame(window)
@@ -17,7 +17,7 @@ def generate_comment():
   video_link=link_entry.get()
   link_entry.delete("0","end")
   
-  
+  api_key = api_entry.get()
   tone = mood_value_inside.get()
   grammar_quality = grammar_value_inside.get()
 
@@ -26,7 +26,7 @@ def generate_comment():
   
   file_dir = os.path.dirname(os.path.realpath('__file__'))
   file_name = os.path.join(file_dir, f'Content/{mp3name}.mp3')
-  output_box.insert( "1.0", openai_implementation.comment(openai_implementation.transcribe(file_name), tone, grammar_quality))
+  output_box.insert( "1.0", openai_implementation.comment(openai_implementation.transcribe(file_name, api_key), tone, grammar_quality))
 
 
 def copy_text():
@@ -36,15 +36,21 @@ def copy_text():
 
 
 # Video Link
+api_key_frame = tk.LabelFrame(frame, text="OpenAI API Key")
+api_key_frame.grid(row= 0, column= 0, pady=10)
+
+api_entry=tk.Entry(api_key_frame)
+api_entry.pack(padx=10,pady=10)
+
 video_link_frame = tk.LabelFrame(frame, text="TikTok Video Link")
-video_link_frame.grid(row= 0, column= 0, pady=10)
+video_link_frame.grid(row= 1, column= 0, pady=10)
 
 link_entry=tk.Entry(video_link_frame)
 link_entry.pack(padx=10,pady=10)
 
 # Configuration
 config_frame = tk.LabelFrame(frame, text="Configuration")
-config_frame.grid(row=1, column=0)
+config_frame.grid(row=2, column=0)
 
 mood_label = tk.Label(config_frame, text="Tone")
 mood_label.grid(row=0, column=0)
@@ -66,7 +72,7 @@ grammar_select.grid(row=1, column=1, padx=10, pady=10)
 
 # Output
 output_frame = tk.LabelFrame(frame, text="Output")
-output_frame.grid(row=2, column=0)
+output_frame.grid(row=3, column=0)
 
 generate_button = tk.Button(output_frame, text="Generate", command=generate_comment)
 generate_button.grid(row=0, column = 0 , padx=10, pady=10)

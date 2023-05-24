@@ -1,9 +1,8 @@
-import openai, json
+import openai
 
-def transcribe(file):
-  f = open('api_key.json', 'r')
-  key = json.load(f)
-  openai.api_key = key['api_key']
+def transcribe(file, api_key):
+
+  openai.api_key = api_key
   audio_file= open(file, "rb")
   transcript = openai.Audio.transcribe("whisper-1", audio_file)["text"]
   return transcript

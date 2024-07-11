@@ -5,9 +5,8 @@ Python Tkinter app that uses openAI's API to generate a tiktok comment from a ti
 # How To Use
 
     1. install all files from github
-    2. install requirements
-    3. enter openAI api key into [api_key.json]
-    4. run main.py
-    5. copy link from tiktok (not from search bar)
-    6. fill out the from
-    7. click generate
+    2. install the latest version of Python 3 and install all requirements using pip
+    3. run main.py
+    4. copy link from tiktok (not from search bar)
+    5. fill out the form
+    6. generate
